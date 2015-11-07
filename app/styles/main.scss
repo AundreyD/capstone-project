@@ -1,6 +1,16 @@
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+
+/* Variables */
+
 $icon-font-path: '../fonts/';
 $brand-gold: #b68d27;
 $brand-gold-light: #e0ad2e;
+
+
+/* Mixins */
 
 @mixin clearfix {
     &:before,
@@ -13,9 +23,8 @@ $brand-gold-light: #e0ad2e;
     }
 }
 
-// bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
+
+/* Font Declarations */
 
 @font-face {
   font-family: Roboto-Condensed;
@@ -29,6 +38,9 @@ $brand-gold-light: #e0ad2e;
   font-family: Geosans-Light;
   src: url(/fonts/GeosansLight.ttf);
 }
+
+
+/* Home Pages and Base Styles */
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -48,7 +60,9 @@ body {
 }
 
 body {
-  background-color: black;
+  background: url(/images/splashimg.jpg);
+  background-position: 25%;
+  background-size: cover;
   color: #e3e3e3;
   font-family: "Roboto-Slab";
   font-size: 18px;
@@ -124,7 +138,7 @@ a:hover {
       transform: translateX(-50%) translateY(-50%);
       -webkit-transform: translateX(-50%) translateY(-50%);
       background-size: cover;
-      background: url(/assets/splashimg.jpg);
+      background: url(/images/splashimg.jpg);
   }
 
   .splash-msg {
@@ -136,4 +150,43 @@ a:hover {
     bottom: 50px;
     left: 0;
   }
+}
+
+/* Template for Main Pages */
+
+header {
+  nav {
+    @include clearfix;
+    background: black;
+    border-bottom: 1.5px solid $brand-gold;
+    color: $brand-gold-light;
+    font-family: "Roboto-Condensed";
+    width: 100%;
+
+    h1 {
+      float: left;
+      padding: 20px 30px 5px;
+    }
+  }
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1.5px solid $brand-gold;
+  line-height: 2em;
+  min-height: 100vh;
+  margin: 20px 10%;
+  padding: 10px 35px;
+  width: 80%;
+
+  h1 {
+    color: $brand-gold-light;
+    font-family: "Roboto-Condensed";
+  }
+}
+
+footer {
+  background: black;
+  border-top: 1.5px solid $brand-gold;
+  text-align: center;
 }

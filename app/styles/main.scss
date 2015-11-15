@@ -23,6 +23,8 @@ $brand-gold-light: #e0ad2e;
     }
 }
 
+/* TODO: Organize all of these style sections into their own separate files */
+
 
 /* Font Declarations */
 
@@ -59,8 +61,19 @@ body {
   width: 100%;
 }
 
+nav {  
+  .icon-bar {
+    color: $brand-gold;
+  }
+
+  .navbar-collapse {
+    overflow-x: hidden;
+  }
+}
+
 body {
   background: url(/images/splashimg.jpg);
+  background-color: black;
   background-position: 25%;
   background-size: cover;
   color: #e3e3e3;
@@ -175,12 +188,12 @@ header {
   border: 1.5px solid $brand-gold;
   line-height: 2em;
   min-height: 100vh;
-  margin: 20px 10%;
+  margin: 20px 15%;
   padding: 10px 35px;
-  width: 80%;
+  width: 70%;
 
   h1 {
-    color: $brand-gold-light;
+    color: white;
     font-family: "Roboto-Condensed";
   }
 }
@@ -189,4 +202,135 @@ footer {
   background: black;
   border-top: 1.5px solid $brand-gold;
   text-align: center;
+}
+
+/* Tour Page */
+.table-responsive {
+  margin-top: 25px;
+}
+
+thead {
+  font-family: "Roboto-Condensed";
+}
+
+tbody tr:hover {
+  color: black;
+  background-color: $brand-gold
+}
+
+td {
+  padding: 10px 5px !important;
+}
+
+
+/* Music Page */
+
+
+
+/* News Page */
+h3 {
+  font-family: "Roboto-Condensed";
+}
+
+
+/* About Page */
+.image {
+  border: 1px solid black;
+  display: inline-block;
+  float: right;
+  height: 50%;
+  margin: 10px 15px;
+  width: 50%;
+}
+
+main p {
+  display: inline-block;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+
+/* Media Queries */
+@media only screen and (min-width: 596px) and (max-width: 1064px) {
+  .menu-nav {
+    margin: 0 -50px;
+  }
+
+  .social-icons {
+    margin: 0 -20px;
+  }
+
+  .content {
+    border: 0;
+    font-size: 18px;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 199px) and (max-width: 595px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .navbar-toggle {
+    padding: 0 10px;
+    margin: 0;
+  }
+
+  .menu-nav {
+    font-size: 16px;
+    margin: 0 -60px;
+  }
+
+  .social-icons {
+    margin: 0 -20px;
+  }
+
+  .content {
+    border: 0;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 596px) and (max-width: 1064px) and (orientation: landscape) {
+  .splash-msg {
+    font-size: 24px;
+  }
+
+  .content {
+    border: 1.5px solid $brand-gold;
+    font-size: 18px;
+    margin: 20px 15%;
+    padding: 10px 35px;
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 199px) and (max-width: 595px) and (orientation: landscape) {
+  .content {
+    border: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* Media Query to force bootstrap's nav-collapse to occur at 961px width */
+@media (min-width: 768px) and (max-width: 961px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
 }

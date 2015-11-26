@@ -28,9 +28,7 @@
       <nav>
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-id">
-              <span class="icon-bar">___</span>
-              <span class="icon-bar">___</span>
-              <span class="icon-bar">___</span>                        
+              <span class="icon-bar">&#9776;</span>                     
             </button>
             <a href="index.html"><h1>PHANTOGRAM</h1></a>
           </div>
@@ -70,16 +68,32 @@
       <div class="row">
 
       <!-- column 1 start -->
-        <div class="col-sm-7">
+        <div class="col-sm-6 col-xs-12">
           <h3>TUMBLR</h3>
-          <p>Tumblr Content</p>
+          <div id="tumblr-feed">
+            <script id="tumblr-template" type="text/template">
+              {{#each response.posts}}
+              <div class="well">
+                <h4>{{moment date}}</h4>
+                  <a href="{{short_url}}">
+                    {{#if photos.0.alt_sizes.2.url}}
+                      <img src="{{photos.0.alt_sizes.2.url}}" />
+                    {{/if}}
+                    <p><small>{{summary}}</small></p>
+                  </a>
+                </div>
+              {{/each}}
+              <a href="{{response.blog.url}}"><aside>SEE MORE<aside></a>
+            </script>         
+          </div>
         </div> 
       <!-- column 1 end -->
       
       <!-- column 2 start -->
-        <div class="col-sm-5">
+        <div class="col-sm-6 col-xs-12">
           <h3>TWITTER</h3>
-          <p>Twitter Content</p>
+            <a class="twitter-timeline"  href="https://twitter.com/Phantogram" data-widget-id="669937457840988160">Tweets by @Phantogram</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
       <!-- column 2 end -->
 
@@ -101,6 +115,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/handlebars/handlebars.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
@@ -120,7 +135,7 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/news.js"></script>
     <!-- endbuild -->
   </body>
 </html>

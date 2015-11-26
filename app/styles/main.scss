@@ -183,6 +183,11 @@ header {
   }
 }
 
+.icon-bar {
+  display: inline !important;
+  font-size: 30px;
+}
+
 .content {
   background-color: rgba(0, 0, 0, 0.9);
   border: 1.5px solid $brand-gold;
@@ -229,6 +234,22 @@ td {
 
 /* News Page */
 h3 {
+  font-family: "Roboto-Condensed";
+}
+
+.well {
+  background-color: #333;
+  border-color: #444;
+  line-height: .7em;
+
+  img {
+    border: 1px solid white;
+    margin: 0 10%;
+    width: 80%;
+  }
+}
+
+aside {
   font-family: "Roboto-Condensed";
 }
 
@@ -295,6 +316,10 @@ main p {
     padding: 10px;
     width: 100%;
   }
+
+  .navbar-toggle {
+    padding: 8px 10px 0;
+  }
 }
 
 @media only screen and (min-width: 596px) and (max-width: 1064px) and (orientation: landscape) {
@@ -316,6 +341,10 @@ main p {
     border: 0;
     margin: 0;
     width: 100%;
+  }
+
+  .navbar-toggle {
+    padding: 8px 10px 0;
   }
 }
 

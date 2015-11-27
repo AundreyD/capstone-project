@@ -65,99 +65,26 @@
     </header>
     <main class="content">
       <h1>TOUR</h1>
-      <div class="table-responsive"> 
+      <div> 
       
-      <table class="table table-hover table-condensed">
+      <table class="table">
         <thead>
           <tr>
-            <th>DATE</th>
-            <th>VENUE</th>
-            <th>LOCATION</th>
+            <td class="col-xs-3">DATE</td>
+            <td class="col-xs-7">VENUE</td>
+            <td class="col-xs-2">TICKETS</td>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Dec 01</td>
-            <td>Toyota Center w/Muse</td>
-            <td>Houston, TX</td>
-          </tr>
-          <tr>
-            <td>Dec 02</td>
-            <td>American Airlines w/Muse</td>
-            <td>Dalas, TX</td>
-          </tr>
-          <tr>
-            <td>Dec 04</td>
-            <td>American Airlines w/Muse</td>
-            <td>Albuquerque, NM</td>
-          </tr>
-        
-          <tr>
-            <td>Dec 05</td>
-            <td>Gila River Arena w/Muse</td>
-            <td>Glendale, AZ</td>
-          </tr>
-        
-          <tr>
-            <td>Dec 06</td>
-            <td>Mandalay Bay w/Muse</td>
-            <td>Las Vegas, NV</td>
-          </tr>
-        
-          <tr>
-            <td>Dec 08</td>
-            <td>Knitting Factory Concert House</td>
-            <td>Boise, ID</td>
-          </tr>
-        
-          <tr>
-            <td>Dec 09</td>
-            <td>Knitting Factory Concert House</td>
-            <td>Spokane WA</td>
-          </tr>
-        
-          <tr>
-            <td>Dec 10</td>
-            <td>Rogers Arena w/Muse</td>
-            <td>Vancouver, Canada</td>
-          </tr>
-        
-          <tr>
-            <td>Dec 12</td>
-            <td>Key Arena w/ Muse</td>
-            <td>Seattle, WA</td>
-          </tr>
-        
-          <tr>
-            <td>Dec 13</td>
-            <td>Moda Center w/Muse</td>
-            <td>Portland, OR</td>
-          </tr>
-        
-          <tr>
-            <td>Dec 15</td>
-            <td>Oracle Arena w/Muse</td>
-            <td>Oakland, CA</td>
-          </tr>
-        
-          <tr>
-            <td>Dec 16</td>
-            <td>Valley View Casino Center w/Muse</td>
-            <td>San Diego, CA</td>
-          </tr>
-        
-          <tr>
-            <td>Dec 18</td>
-            <td>Staples Center w/Muse</td>
-            <td>Los Angeles, CA</td>
-          </tr>
-        
-          <tr>
-            <td>Dec 19</td>
-            <td>Staples Center</td>
-            <td>Los Angeles, CA</td>
-          </tr>        
-
+        <tbody id="bit-feed">
+          <script id="bit-template" type="text/template">
+            {{#each this}}
+              <tr>
+                <td class="col-xs-3">{{moment datetime}}</td>
+                <td class="col-xs-7">{{title}}</td>
+                <td class="col-xs-2"><a href="{{ticket_url}}" target="_blank">BUY</a></td>
+              </tr>
+            {{/each}}
+          </script>
         </tbody>
       </table>
       </div>
@@ -179,6 +106,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/handlebars/handlebars.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
@@ -198,7 +126,7 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/tours.js"></script>
     <!-- endbuild -->
   </body>
 </html>

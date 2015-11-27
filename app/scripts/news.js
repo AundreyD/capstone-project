@@ -1,6 +1,8 @@
 (function($) {
 	'use strict';
 
+  // Tumblr API var delcarations
+
 	var tumblrUri = 'http://api.tumblr.com/v2/blog/phantogrammusic.tumblr.com/posts?limit=5&api_key=9ZGNKylKIP5o9I4VE87PrG2EkgQDeEugaUOV2K24w8s5uvgsy3',
 			tumblrFeed = $('#tumblr-feed'),
 			tumblrHb = Handlebars.compile(document.getElementById('tumblr-template').innerHTML);

@@ -218,13 +218,25 @@ thead {
   font-family: "Roboto-Condensed";
 }
 
-tbody tr:hover {
-  color: black;
-  background-color: $brand-gold
-}
-
 td {
   padding: 10px 5px !important;
+
+  a {
+    color: $brand-gold-light;
+    font-family: "Roboto-Condensed";
+    border: 1px solid $brand-gold-light;
+    padding: 2px 30%;
+    width: 100%;
+  }
+  a:hover {
+    color: black;
+    background-color: $brand-gold-light;
+    text-decoration: none;
+  }
+}
+
+td.col-xs-7 {
+  padding-right: 10px !important;
 }
 
 

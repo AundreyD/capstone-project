@@ -19,7 +19,6 @@
       type: 'GET',
       dataType: 'jsonp',
       success: function(result) {
-      	console.log(result);
         bitFeed.append(bitHb(result));
       }
     });

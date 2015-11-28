@@ -189,6 +189,7 @@ header {
 }
 
 .content {
+  @include clearfix;
   background-color: rgba(0, 0, 0, 0.9);
   border: 1.5px solid $brand-gold;
   line-height: 2em;
@@ -241,7 +242,35 @@ td.col-xs-7 {
 
 
 /* Music Page */
+.spotify-section {
+  padding: 15px 0;
 
+  img {
+    margin: 10px 2%;
+    border: 1px solid $brand-gold-light;
+    width: 96%;
+  }
+
+  p {
+    bottom: 0;
+    color: white;
+    font-family: "Roboto-Condensed";
+    font-size: 20px;
+    left: 0;
+    padding-left: 30px;
+    position: absolute;
+    text-align: left;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, .5), 
+                -1px -1px 0 rgba(0, 0, 0, .5), 
+                 1px -1px 0 rgba(0, 0, 0, .5), 
+                -1px 1px 0 rgba(0, 0, 0, .5), 
+                 1px 1px 0 rgba(0, 0, 0, .5);
+  }
+}
+
+.soundcloud-section {
+  padding: 0;
+}
 
 
 /* News Page */
@@ -331,6 +360,12 @@ main p {
 
   .navbar-toggle {
     padding: 8px 10px 0;
+  }
+
+  .spotify-section {
+    p {
+      font-size: 14px;
+    }
   }
 }
 

@@ -1,0 +1,21 @@
+// Mixins
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin textshadow {
+	text-shadow: 3px 3px 0 rgba(0, 0, 0, .5), 
+              -1px -1px 0 rgba(0, 0, 0, .5), 
+               1px -1px 0 rgba(0, 0, 0, .5), 
+              -1px 1px 0 rgba(0, 0, 0, .5), 
+               1px 1px 0 rgba(0, 0, 0, .5);
+}

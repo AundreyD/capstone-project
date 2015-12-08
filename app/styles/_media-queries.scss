@@ -1,0 +1,130 @@
+// Media Queries
+
+@media only screen and (min-width: 596px) and (max-width: 1064px) {
+  .menu-nav {
+    margin: 0 -50px;
+  }
+
+  .social-icons {
+    margin: 0 -20px;
+  }
+
+  .content {
+    border: 0;
+    font-size: 18px;
+    margin: 0;
+    max-width: 1064px;
+    padding: 15px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 199px) and (max-width: 595px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .well {
+    small {
+      line-height: 1.4em;
+    }
+  }
+
+  .navbar-toggle {
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .menu-nav {
+    font-size: 16px;
+    margin: 0 -60px;
+  }
+
+  .social-icons {
+    margin: 0 -20px;
+  }
+
+  .content {
+    border: 0;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .navbar-toggle {
+    padding: 8px 10px 0;
+  }
+
+  #nav-id {
+    .menu-nav {
+      margin: 0 -10px;
+      width: auto;
+
+      li {
+        padding: 5px 5px 0;
+      }
+    }
+
+    .social-icons {
+      float: left !important;
+      width: auto;
+
+      li {
+        padding: 5px 5px 0;
+      }
+    }
+  }
+
+  .spotify-section {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media only screen and (min-width: 596px) and (max-width: 1064px) and (orientation: landscape) {
+  .splash-msg {
+    font-size: 24px;
+  }
+
+  .content {
+    font-size: 18px;
+    padding: 10px 35px;
+  }
+}
+
+@media only screen and (min-width: 199px) and (max-width: 595px) and (orientation: landscape) {
+  .content {
+    border: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar-toggle {
+    padding: 8px 10px 0;
+  }
+}
+
+// Media Query to force bootstrap's nav-collapse to occur at 961px width
+@media (min-width: 768px) and (max-width: 961px) {
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  .navbar-header .collapse, .navbar-toggle {
+    display: block !important;
+  }
+
+  .navbar-header {
+    float: none;
+  }
+}

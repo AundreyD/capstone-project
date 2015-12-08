@@ -1,0 +1,31 @@
+// Tour Page
+
+.table-responsive {
+  margin-top: 25px;
+}
+
+thead {
+  font-family: 'Roboto-Condensed';
+}
+
+td {
+  padding: 10px 5px !important;
+
+  a {
+    border: 1px solid $brand-gold-light;
+    color: $brand-gold-light;
+    font-family: 'Roboto-Condensed';
+    padding: 2px 30%;
+    width: 100%;
+  }
+  
+  a:hover {
+    color: black;
+    background-color: $brand-gold-light;
+    text-decoration: none;
+  }
+
+  .col-xs-7 {
+    padding-right: 10px !important;
+  }
+}

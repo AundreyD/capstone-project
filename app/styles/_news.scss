@@ -1,0 +1,28 @@
+// News Page
+
+h3 {
+  font-family: 'Roboto-Condensed';
+}
+
+.well {
+  background-color: rgb(45, 45, 45);
+  border-color: $grey-border;
+  line-height: .7em;
+  padding: 0;
+
+  img {
+    border: 1px solid $grey-border;
+    margin: 0 10%;
+    width: 80%;
+  }
+
+  .post-section {
+    border-bottom: 1.5px solid $dark-grey;
+    padding: 10px 19px;
+  }
+}
+
+aside {
+  font-family: 'Roboto-Condensed';
+  margin: 18px;
+}

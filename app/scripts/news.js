@@ -9,7 +9,7 @@
 
 	// Moment.js Helper
   Handlebars.registerHelper('moment', function(context) {
-    return window.moment ? moment(context, 'YYYY-MM-DD hh:mm:ss ZZZ').fromNow() : context;
+    return window.moment ? moment(context).format('L') : context;
   });
 
 	var loadTumblr = function() {

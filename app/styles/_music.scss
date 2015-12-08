@@ -1,0 +1,27 @@
+// Music Page
+
+.spotify-section {
+  padding: 15px 0;
+
+  img {
+    border: 1px solid $brand-gold-light;
+    margin: 10px 2%;
+    width: 96%;
+  }
+
+  p {
+    @include textshadow;
+    bottom: 0;
+    color: white;
+    font-family: 'Roboto-Condensed';
+    font-size: 20px;
+    left: 0;
+    padding-left: 30px;
+    position: absolute;
+    text-align: left;
+  }
+}
+
+.soundcloud-section {
+  padding: 0;
+}

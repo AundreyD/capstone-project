@@ -37,7 +37,7 @@ nav {
 }
 
 body {
-  background: url('/images/splashimg.jpg');
+  background: url('../images/splashimg.jpg');
   background-color: black;
   background-position: 25%;
   background-size: cover;
@@ -105,7 +105,7 @@ a:hover {
   }
 
   video {
-    background: url('/images/splashimg.jpg');
+    background: url('../images/splashimg.jpg');
     background-size: cover;
     filter: brightness(80%);
     height: auto;

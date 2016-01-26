@@ -74,7 +74,7 @@
             <script id="tumblr-template" type="text/template">
               {{#each response.posts}}
               <div class="post-section">
-                <h4>{{moment date}}</h4>
+                <small>{{moment date}}</small>
                   <a href="{{short_url}}">
                     {{#if photos.0.alt_sizes.2.url}}
                       <img src="{{photos.0.alt_sizes.2.url}}" />

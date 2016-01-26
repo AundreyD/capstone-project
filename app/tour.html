@@ -65,18 +65,18 @@
     </header>
     <main class="content">
       <h1>TOUR</h1>
-      <div> 
-      
-      <table class="table">
-        <thead>
-          <tr>
-            <td class="col-xs-3">DATE</td>
-            <td class="col-xs-7">VENUE</td>
-            <td class="col-xs-2">TICKETS</td>
-          </tr>
-        </thead>
-        <tbody id="bit-feed">
-          <script id="bit-template" type="text/template">
+      <div id="bit-feed"> 
+        <script id="bit-template" type="text/template">
+          {{#if this}}
+          <table class="table">
+            <thead>
+              <tr>
+                <td class="col-xs-3">DATE</td>
+                <td class="col-xs-7">VENUE</td>
+                <td class="col-xs-2">TICKETS</td>
+              </tr>
+            </thead>
+            <tbody>
             {{#each this}}
               <tr>
                 <td class="col-xs-3">{{moment datetime}}</td>
@@ -84,13 +84,19 @@
                 <td class="col-xs-2"><a href="{{ticket_url}}" target="_blank">BUY</a></td>
               </tr>
             {{/each}}
-          </script>
-        </tbody>
-      </table>
+            </tbody>
+          </table>
+          {{else}}
+            <h3>THERE ARE CURRENTLY NO TOURS LISTED</h3>
+          {{/if}}
+        </script>
       </div>
     </main>
     <footer>
       <small>© Copyright 2015 Republic Records</small>
+      <p>
+        <small>This a personal project for class studies. All rights belong to their respective owners.</small>
+      </p>
     </footer>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

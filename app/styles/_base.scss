@@ -175,4 +175,8 @@ footer {
   background: black;
   border-top: 1.5px solid $brand-gold;
   text-align: center;
+
+  p {
+    margin: 0;
+  }
 }
